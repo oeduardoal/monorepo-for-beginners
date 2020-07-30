@@ -1,0 +1,51 @@
+name: Build, Test and Publish
+
+on:
+  pull_request:
+    branches:
+      - master
+    types: [opened, synchronize, reopened, closed]
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    env:
+      GH_REF: ${{ (github.event.pull_request.merged && github.base_ref) || github.ref }}
+      GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      NODE_AUTH_TOKEN: ${{ secrets.GH_TOKEN }}
+    steps:
+      - name: Setup GitHub User
+        run: |
+          git config --global user.email octobot@github.com
+          git config --global user.name GitHub Actions
+
+      - name: Set up GitHub Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ env.GH_REF }}
+          token: ${{ secrets.GH_TOKEN }}
+          fetch-depth: 0
+
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo '$GITHUB_CONTEXT'
+
+      - name: Use Node.js 11.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 11.x
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@oeduardoal'
+
+      - name: Install packages
+        run: |
+          npm install --global lerna
+          lerna bootstrap -- --frozen-lockfile
+
+      - name: Publish
+        if: github.event.pull_request.merged
+        run: lerna publish --yes --create-release github
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
