@@ -2,7 +2,7 @@
 
 const package1 = require('..');
 
-describe('package-1', () => {
+describe('package-11', () => {
     it('needs tests');
 });
 
