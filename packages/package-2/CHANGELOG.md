@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.1.1-canary.2 (2021-03-20)
+
+
+### Features
+
+* ci ([88bc6e1](https://github.com/oeduardoal/monorepo-for-beginners/commit/88bc6e116ba7d233db21f4e05bd888a57f5f8823))
+
+
+
+
+
 ## 0.1.1-canary.1 (2021-03-20)
 
 
