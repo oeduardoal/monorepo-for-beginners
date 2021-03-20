@@ -45,8 +45,12 @@ jobs:
       - name: Canary
         if: github.ref == 'refs/heads/canary'
         run: yarn canary
+        env:
+          NODE_AUTH_TOKEN: ${{ env.GH_TOKEN }}
 
       - name: Main
         if: github.ref == 'refs/heads/main'
         run: yarn release
+        env:
+          NODE_AUTH_TOKEN: ${{ env.GH_TOKEN }}
         
