@@ -3,7 +3,7 @@
   "packages": ["packages/*"],
   "command": {
     "publish": {
-      "allowBranch": ["master"],
+      "allowBranch": ["main", "canary"],
       "conventionalCommits": true,
       "createRelease": "github",
       "message": "chore(release): publish :rocket:",
