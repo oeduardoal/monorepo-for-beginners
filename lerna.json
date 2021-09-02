@@ -1,0 +1,14 @@
+{
+  "version": "independent",
+  "packages": ["packages/*"],
+  "command": {
+    "version": {
+      "exact": true
+    },
+    "publish": {
+      "npmClient": "npm",
+      "allowBranch": ["main", "canary"],
+      "registry": "https://npm.pkg.github.com"
+    }
+  }
+}

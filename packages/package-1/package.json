@@ -1,0 +1,30 @@
+{
+  "name": "@oeduardoal/package-1",
+  "version": "0.0.1",
+  "description": "package-1",
+  "author": "Eduardo Almeida <oeduardoal@gmail.com>",
+  "homepage": "https://github.com/oeduardoal/monorepo-for-beginners#readme",
+  "license": "ISC",
+  "main": "lib/package-1.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "dependencies": {
+    "@oeduardoal/package-2": "0.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oeduardoal/monorepo-for-beginners.git",
+    "directory": "packages/package-1"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/oeduardoal/monorepo-for-beginners/issues"
+  }
+}
