@@ -3,9 +3,11 @@
   "packages": ["packages/*"],
   "command": {
     "version": {
+      "conventionalCommits": true,
       "exact": true
     },
     "publish": {
+      "conventionalCommits": true,
       "npmClient": "npm",
       "allowBranch": ["main", "canary"],
       "registry": "https://npm.pkg.github.com"
