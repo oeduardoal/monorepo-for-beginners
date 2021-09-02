@@ -5043,7 +5043,7 @@ registry-url@3.1.0:
   dependencies:
     rc "^1.0.1"
 
-release@6.3.0:
+release@^6.3.0:
   version "6.3.0"
   resolved "https://registry.yarnpkg.com/release/-/release-6.3.0.tgz#bbd351d7460948f1ed55ea02b4b2393f98a1637a"
   integrity sha512-p2dQcsNzCwI0LMHFb/BAd49NrTbIlt2krjaDVHsjV40tScLIRHVatEtN+4MV4Xx9jKKGiZGoM2gtrSn6vJeM1g==
