@@ -1,6 +1,8 @@
 {
-  "version": "0.0.3",
-  "packages": ["packages/*"],
+  "version": "0.0.4-canary.0",
+  "packages": [
+    "packages/*"
+  ],
   "command": {
     "version": {
       "conventionalCommits": true,
@@ -9,7 +11,10 @@
     "publish": {
       "conventionalCommits": true,
       "npmClient": "npm",
-      "allowBranch": ["main", "canary"],
+      "allowBranch": [
+        "main",
+        "canary"
+      ],
       "registry": "https://npm.pkg.github.com"
     }
   }
