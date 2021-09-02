@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.4-canary.3](https://github.com/oeduardoal/monorepo-for-beginners/compare/v0.0.4-canary.2...v0.0.4-canary.3) (2021-09-02)
+
+**Note:** Version bump only for package @oeduardoal/package-1
+
+
+
+
+
 ## [0.0.4-canary.2](https://github.com/oeduardoal/monorepo-for-beginners/compare/v0.0.4-canary.1...v0.0.4-canary.2) (2021-09-02)
 
 **Note:** Version bump only for package @oeduardoal/package-1
