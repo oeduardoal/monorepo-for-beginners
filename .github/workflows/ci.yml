@@ -3,9 +3,6 @@ name: Build, Test and Publish
 on:
   push:
     branches: [canary]
-    tags: [v*]
-  pull_request:
-    types: [opened, synchronize]
 
 jobs:
   build:
@@ -61,6 +58,13 @@ jobs:
           registry-url: "https://npm.pkg.github.com"
           scope: "@oeduardoal"
 
-      - run: ./scripts/publish-release.sh
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Setup GitHub User
+        run: |
+          git config --global user.email oeduardoal@gmail.com
+          git config --global user.name "Eduardo Almeida"
+
+      - name: Create Release Pull Request
+        uses: changesets/action@master
+        with:
+          version: yarn version
+          version: yarn publish

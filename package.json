@@ -7,13 +7,17 @@
     "node": ">= 8.0.0"
   },
   "scripts": {
-    "publish-canary": "git checkout canary && git pull && lerna version prerelease --preid canary --yes --force-publish && release --pre --skip-questions",
-    "publish-stable": "lerna version --conventional-graduate --force-publish"
+    "version": "changeset version && yarn",
+    "release": "changeset publish"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
     "lerna": "^3.20.2",
     "release": "^6.3.0"
+  },
+  "dependencies": {
+    "@changesets/changelog-github": "^0.4.0",
+    "@changesets/cli": "^2.17.0"
   }
 }
