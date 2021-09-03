@@ -67,4 +67,4 @@ jobs:
         uses: changesets/action@master
         with:
           version: yarn version
-          version: yarn publish
+          publish: yarn release

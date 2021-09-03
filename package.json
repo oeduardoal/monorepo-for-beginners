@@ -13,8 +13,7 @@
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
-    "lerna": "^3.20.2",
-    "release": "^6.3.0"
+    "lerna": "^3.20.2"
   },
   "dependencies": {
     "@changesets/changelog-github": "^0.4.0",
