@@ -2,12 +2,12 @@
   "$schema": "https://unpkg.com/@changesets/config@1.6.1/schema.json",
   "changelog": [
     "@changesets/changelog-github",
-    { "repo": "grupoboticario/flora" }
+    { "repo": "oeduardoal/monorepo-for-beginners" }
   ],
   "commit": false,
   "linked": [],
   "access": "restricted",
-  "baseBranch": "master",
+  "baseBranch": "canary",
   "updateInternalDependencies": "patch",
   "___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
     "onlyUpdatePeerDependentsWhenOutOfRange": true
