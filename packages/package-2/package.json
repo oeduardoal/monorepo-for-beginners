@@ -1,6 +1,6 @@
 {
   "name": "@oeduardoal/package-2",
-  "version": "0.9.1-canary.0",
+  "version": "0.10.0",
   "description": "package-2",
   "author": "Eduardo Almeida <oeduardoal@gmail.com>",
   "homepage": "https://github.com/oeduardoal/monorepo-for-beginners#readme",
@@ -14,7 +14,7 @@
     "lib"
   ],
   "dependencies": {
-    "@oeduardoal/package-1": "0.9.1-canary.0"
+    "@oeduardoal/package-1": "0.10.0"
   },
   "repository": {
     "type": "git",
