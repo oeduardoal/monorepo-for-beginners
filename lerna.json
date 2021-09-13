@@ -1,16 +1,16 @@
 {
-  "version": "independent",
+  "npmClient": "yarn",
+  "useWorkspaces": true,
   "packages": ["packages/*"],
   "command": {
     "version": {
-      "conventionalCommits": true,
       "exact": true
     },
     "publish": {
-      "conventionalCommits": true,
       "npmClient": "npm",
       "allowBranch": ["main", "canary"],
       "registry": "https://npm.pkg.github.com"
     }
-  }
+  },
+  "version": "0.8.0"
 }

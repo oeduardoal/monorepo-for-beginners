@@ -19,11 +19,6 @@ jobs:
           git config --global user.email oeduardoal@gmail.com
           git config --global user.name "Eduardo Almeida"
 
-      - name: Dump GitHub context
-        env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
-        run: echo '$GITHUB_CONTEXT'
-
       - name: Use Node.js 11.x
         uses: actions/setup-node@v1
         with:
@@ -33,6 +28,8 @@ jobs:
 
       - run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
       - run: yarn install --frozen-lockfile --check-files
+
+      # run build
 
       - uses: actions/cache@v2
         id: cache-build
@@ -63,12 +60,7 @@ jobs:
           git config --global user.email oeduardoal@gmail.com
           git config --global user.name "Eduardo Almeida"
 
-      - name: Create Release Pull Request
-        uses: changesets/action@master
-        with:
-          version: yarn version
-          publish: yarn release
+      - name: Publish
+        run: ./scripts/publish-release.sh
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
