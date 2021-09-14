@@ -1,19 +1,13 @@
 {
   "npmClient": "yarn",
   "useWorkspaces": true,
-  "packages": [
-    "packages/*"
-  ],
+  "packages": ["packages/*"],
   "command": {
     "version": {
       "exact": true
     },
     "publish": {
-      "npmClient": "npm",
-      "allowBranch": [
-        "main",
-        "canary"
-      ],
+      "allowBranch": ["canary"],
       "registry": "https://npm.pkg.github.com"
     }
   },
