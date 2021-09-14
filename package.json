@@ -7,13 +7,12 @@
     "node": ">= 8.0.0"
   },
   "scripts": {
-    "publish-canary": "git checkout canary && git pull && lerna version prerelease --preid canary --force-publish && release --pre --skip-questions",
-    "publish-stable": "lerna version --force-publish"
+    "publish-canary": "HUSKY=0 lerna publish --yes prerelease --preid canary --force-publish",
+    "publish-stable": "HUSKY=0 lerna publish --yes --force-publish --conventional-commits --create-release github"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
     "@commitlint/config-conventional": "^8.2.0",
-    "release": "6.3.0",
     "lerna": "^3.20.2"
   },
   "version": "0.0.0"
