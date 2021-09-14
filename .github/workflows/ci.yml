@@ -28,7 +28,6 @@ jobs:
           registry-url: "https://npm.pkg.github.com"
           scope: "@oeduardoal"
 
-      - run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
       - run: yarn install --frozen-lockfile --check-files
 
       - uses: actions/cache@v2
@@ -36,32 +35,6 @@ jobs:
         with:
           path: ./*
           key: ${{ github.sha }}
-
-  publishRelease:
-    name: Potentially publish release
-    runs-on: ubuntu-latest
-    needs: [build]
-    steps:
-      - name: tune linux network
-        run: sudo ethtool -K eth0 tx off rx off
-
-      - uses: actions/cache@v2
-        id: restore-build
-        with:
-          path: ./*
-          key: ${{ github.sha }}
-
-      - name: Use Node.js 11.x
-        uses: actions/setup-node@v1
-        with:
-          node-version: 16.x
-          registry-url: "https://npm.pkg.github.com"
-          scope: "@oeduardoal"
-
-      - name: Setup GitHub User
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Release
         if: github.ref == 'refs/heads/main'
