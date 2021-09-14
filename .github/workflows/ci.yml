@@ -42,14 +42,14 @@ jobs:
         run: yarn run publish-canary
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GH_TOKEN: ${{ secrets.GH_TOKEN }} # for github-release
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }} # for github-release
 
       - name: Release
         if: github.ref == 'refs/heads/main'
         run: yarn run publish-stable
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GH_TOKEN: ${{ secrets.GH_TOKEN }} # for github-release
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }} # for github-release
 
 
   # publishRelease:
