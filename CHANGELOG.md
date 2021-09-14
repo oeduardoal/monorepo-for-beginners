@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.2-canary.1](https://github.com/oeduardoal/monorepo-for-beginners/compare/v0.11.2-canary.0...v0.11.2-canary.1) (2021-09-14)
+
+
+### Features
+
+* 🎸 pcksks ([4300195](https://github.com/oeduardoal/monorepo-for-beginners/commit/4300195d24220899e551c58c9f3d6728cb609f91))
+
+
+
+
+
 ## [0.11.2-canary.0](https://github.com/oeduardoal/monorepo-for-beginners/compare/v0.11.1...v0.11.2-canary.0) (2021-09-14)
 
 
