@@ -37,52 +37,32 @@ jobs:
           path: ./*
           key: ${{ github.sha }}
 
-      - name: Pre Release
-        if: github.ref == 'refs/heads/canary'
-        run: yarn run publish-canary
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }} # for github-release
+  publishRelease:
+    name: Potentially publish release
+    runs-on: ubuntu-latest
+    needs: [build]
+    steps:
+      - uses: actions/cache@v2
+        id: restore-build
+        with:
+          path: ./*
+          key: ${{ github.sha }}
+
+      - name: Use Node.js 11.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16.x
+          registry-url: "https://npm.pkg.github.com"
+          scope: "@oeduardoal"
+
+      - name: Setup GitHub User
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
 
       - name: Release
         if: github.ref == 'refs/heads/main'
-        run: yarn run publish-stable
+        run: yarn run release
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }} # for github-release
-
-
-  # publishRelease:
-  #   name: Potentially publish release
-  #   runs-on: ubuntu-latest
-  #   needs: [build]
-  #   steps:
-  #     - uses: actions/cache@v2
-  #       id: restore-build
-  #       with:
-  #         path: ./*
-  #         key: ${{ github.sha }}
-
-  #     - name: Use Node.js 11.x
-  #       uses: actions/setup-node@v1
-  #       with:
-  #         node-version: 16.x
-  #         registry-url: "https://npm.pkg.github.com"
-  #         scope: "@oeduardoal"
-
-  #     - name: Setup GitHub User
-  #       run: |
-  #         git config --global user.email oeduardoal@gmail.com
-  #         git config --global user.name "Eduardo Almeida"
-
-  #     - name: Pre Release
-  #       if: github.ref == 'refs/heads/canary'
-  #       run: yarn run publish-canary
-  #       env:
-  #         NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-  #     - name: Release
-  #       if: github.ref == 'refs/heads/main'
-  #       run: yarn run publish-stable
-  #       env:
-  #         NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

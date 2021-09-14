@@ -7,8 +7,7 @@
     "node": ">= 8.0.0"
   },
   "scripts": {
-    "publish-canary": "HUSKY=0 lerna publish --yes prerelease --preid canary --force-publish --conventional-commits --create-release github",
-    "publish-stable": "HUSKY=0 lerna publish --yes --force-publish --conventional-commits --create-release github"
+    "release": "HUSKY=0 yarn run lerna publish --yes --force-publish --conventional-commits --create-release github"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
