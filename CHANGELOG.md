@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.11.2-canary.2](https://github.com/oeduardoal/monorepo-for-beginners/compare/v0.11.2-canary.1...v0.11.2-canary.2) (2021-09-14)
+
+
+### Bug Fixes
+
+* 🐛 ciiiiii ([3c8258f](https://github.com/oeduardoal/monorepo-for-beginners/commit/3c8258f2e798cdcc0701107d1c84c2d49447cb5b))
+
+
+
+
+
 ## [0.11.2-canary.1](https://github.com/oeduardoal/monorepo-for-beginners/compare/v0.11.2-canary.0...v0.11.2-canary.1) (2021-09-14)
 
 
