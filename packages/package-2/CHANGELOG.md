@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.12.0](https://github.com/oeduardoal/monorepo-for-beginners/compare/@oeduardoal/package-2@0.12.0-canary.0...@oeduardoal/package-2@0.12.0) (2021-09-14)
+
+
+### Features
+
+* 🎸 kskmsmks ([57e7ae6](https://github.com/oeduardoal/monorepo-for-beginners/commit/57e7ae64d16fef0b4169c1b8c1b5ba461c98c78f))
+
+
+### BREAKING CHANGES
+
+* 🧨 tem sim
+
+
+
+
+
 # [0.12.0-canary.0](https://github.com/oeduardoal/monorepo-for-beginners/compare/@oeduardoal/package-2@0.0.2-canary.10...@oeduardoal/package-2@0.12.0-canary.0) (2021-09-14)
 
 
