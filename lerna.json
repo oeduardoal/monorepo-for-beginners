@@ -1,20 +1,16 @@
 {
   "npmClient": "yarn",
   "useWorkspaces": true,
-  "packages": [
-    "packages/*"
-  ],
+  "packages": ["packages/*"],
   "command": {
     "version": {
       "exact": true
     },
     "publish": {
       "exact": true,
-      "allowBranch": [
-        "canary"
-      ],
+      "allowBranch": ["main"],
       "registry": "https://npm.pkg.github.com"
     }
   },
-  "version": "0.11.2-canary.1"
+  "version": "independent"
 }
